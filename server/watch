@@ -1,0 +1,4 @@
+
+> addons-ts-lab-puppiesapi@1.0.0 compile
+> tsc --outDir js
+
