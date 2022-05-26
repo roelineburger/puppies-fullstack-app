@@ -63,7 +63,7 @@ const EditPuppy = ({ puppies, setPuppies }: IEditPuppyProps) => {
   return (
     <section className="editpuppy__container">
       <div className="editpuppy__image">
-        <img src={logo} width="400px" height="400px" alt="puppyphoto" />
+        <img src={logo} width="200px" height="200px" alt="puppyphoto" />
       </div>
 
       <form onSubmit={handleSave} className="editpuppy__form">

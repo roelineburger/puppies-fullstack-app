@@ -50,7 +50,7 @@ const AddPuppy = ({ puppies }: IAddPuppyProps) => {
   return (
     <section className="addpuppy__container">
       <div className="addpuppy__image">
-        <img src={logo} width="400px" height="400px" alt="puppyphoto" />
+        <img src={logo} width="200px" height="200px" alt="puppyphoto" />
       </div>
 
       <form onSubmit={handleSubmit} className="addpuppy__form">

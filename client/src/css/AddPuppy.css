@@ -1,7 +1,7 @@
 .addpuppy__container {
   width: 95vw;
   position: relative;
-  height: 60vh;
+  min-height: 60vh;
   background-color: var(--fawn);
   display: flex;
   flex-direction: column;
@@ -12,9 +12,9 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-.addpuppy__image {
+/* .addpuppy__image {
   display: none;
-}
+} */
 
 .addpuppy__form {
   width: 85%;
@@ -55,6 +55,7 @@
   color: black;
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 2rem;
   background-color: #b99436;
   border: 1px solid #d4a373ff;
 }
