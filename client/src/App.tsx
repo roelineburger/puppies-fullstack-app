@@ -1,51 +1,49 @@
-import React, { useEffect, useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import "./App.css";
-import PuppyDetails from "./components/PuppyDetails";
-import AddPuppy from "./components/AddPuppy";
-import Home from "./components/Home";
-import NavBar from "./components/NavBar";
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import './App.css';
+import PuppyDetails from './components/PuppyDetails/PuppyDetails';
+import AddPuppy from './components/AddPuppy';
+import Home from './components/Home';
+import NavBar from './components/NavBar';
 
-import { Puppy } from "./types";
-import EditPuppy from "./components/EditPuppy";
+import { Puppy } from './types';
+import EditPuppy from './components/EditPuppy';
 
 function App() {
   const [puppies, setPuppies] = useState<Puppy[]>([]);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
   const deletePuppy = async (id: number) => {
     const options = {
-      method: "DELETE",
+      method: 'DELETE',
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
       },
     };
     const response = await fetch(
       `http://localhost:3010/api/puppies/${id}`,
-      options
+      options,
     );
 
     if (response.ok) {
-      setPuppies((prev) => {
-        console.log(prev);
-        const data = prev.filter((p) => p.id !== id);
-        console.log(data);
+      setPuppies(prev => {
+        const data = prev.filter(p => p.id !== id);
         return data;
       });
-      navigate("/");
+      navigate('/');
     } else {
-      setErrorMessage("Unable to delete puppy...");
+      setErrorMessage('Unable to delete puppy...');
       setTimeout(() => {
-        setErrorMessage("");
+        setErrorMessage('');
       }, 4000);
     }
   };
 
   useEffect(() => {
     const fetchPuppies = async () => {
-      const response = await fetch("http://localhost:3010/api/puppies");
+      const response = await fetch('http://localhost:3010/api/puppies');
       const data = await response.json();
 
       setPuppies(data);
