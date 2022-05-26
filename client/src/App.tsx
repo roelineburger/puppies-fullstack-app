@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import './App.css';
-import PuppyDetails from './components/PuppyDetails/PuppyDetails';
 import AddPuppy from './components/AddPuppy';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
+import PuppyDetails from './components/PuppyDetails';
+import './App.css';
 
 import { Puppy } from './types';
 import EditPuppy from './components/EditPuppy';

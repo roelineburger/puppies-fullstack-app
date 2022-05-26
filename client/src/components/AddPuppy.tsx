@@ -52,6 +52,7 @@ const AddPuppy = ({ puppies }: IAddPuppyProps) => {
       <input
         type="text"
         name="name"
+        placeholder="Name"
         value={newPuppy.name}
         required
         onChange={handleChange}
@@ -59,6 +60,7 @@ const AddPuppy = ({ puppies }: IAddPuppyProps) => {
       <input
         type="text"
         name="breed"
+        placeholder="Breed"
         value={newPuppy.breed}
         required
         onChange={handleChange}
