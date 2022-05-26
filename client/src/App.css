@@ -100,10 +100,74 @@
 }
 
 /* ---------------------------------------------------------------- */
-
-.details__card {
+/* .puppy-details {
   background-color: var(--pale-spring-bud-2);
   margin: 1rem;
   padding: 1rem;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+} */
+
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.202);
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  background-color: var(--pale-spring-bud-2);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.details {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.details__name {
+  font-weight: 900;
+}
+
+.details__breed {
+  font-weight: 500;
+}
+
+.details__bdate {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.card__btn {
+  padding: 1rem;
+  color: rgb(0, 0, 103);
+  font-weight: 500;
+}
+
+.card__btn > i {
+  margin-right: 0.5rem;
+}
+
+.fa-pen-to-square {
+  color: rgb(0, 0, 103);
+}
+
+.fa-trash-can {
+  color: rgb(103, 0, 0);
 }
