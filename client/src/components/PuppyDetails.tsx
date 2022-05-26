@@ -1,6 +1,6 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { Puppy } from "../types";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Puppy } from '../types';
 
 interface IPuppyDetails {
   puppies: Puppy[];
