@@ -1,0 +1,75 @@
+.editpuppy__container {
+  width: 85vw;
+  position: relative;
+  height: 60vh;
+  background-color: #e9edc9ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.editpuppy__image {
+  display: none;
+}
+
+.editpuppy__form {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editpuppy__heading {
+  font-size: 24px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 1rem;
+  color: black;
+  font-weight: 600;
+}
+
+.editpuppy__form input {
+  height: 5vh;
+  width: 90%;
+  border-radius: 1rem;
+  margin: 5px;
+  color: rgb(38, 8, 66);
+  font-size: medium;
+  border: 2px solid #d4a373ff;
+}
+
+.editpuppy__button {
+  margin-top: 1rem;
+  width: 50%;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #b99436;
+  border: 1px solid #d4a373ff;
+}
+
+@media screen and (min-width: 680px) {
+  .editpuppy__container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 70vh;
+  }
+  .editpuppy__image {
+    display: block;
+    width: 50%;
+    padding: 2rem;
+  }
+  .editpuppy__form {
+    width: 30%;
+  }
+}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Puppy } from "../types";
+import logo from "../dog.svg";
+import "../css/EditPuppy.css";
 
 interface IEditPuppyProps {
   puppies: Puppy[];
@@ -59,32 +61,40 @@ const EditPuppy = ({ puppies, setPuppies }: IEditPuppyProps) => {
     handleEditPuppy();
   };
   return (
-    <form onSubmit={handleSave}>
-      {message && <h2>{message}</h2>}
-      <header>Edit puppy</header>
-      <input
-        type="text"
-        name="name"
-        value={editPuppy.name}
-        required
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="breed"
-        value={editPuppy.breed}
-        required
-        onChange={handleChange}
-      />
-      <input
-        type="date"
-        name="birthDate"
-        value={editPuppy.birthDate}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Save</button>
-    </form>
+    <section className="editpuppy__container">
+      <div className="editpuppy__image">
+        <img src={logo} width="400px" height="400px" alt="puppyphoto" />
+      </div>
+
+      <form onSubmit={handleSave} className="editpuppy__form">
+        {message && <h2>{message}</h2>}
+        <header className="editpuppy__heading">Edit puppy</header>
+        <input
+          type="text"
+          name="name"
+          value={editPuppy.name}
+          required
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="breed"
+          value={editPuppy.breed}
+          required
+          onChange={handleChange}
+        />
+        <input
+          type="date"
+          name="birthDate"
+          value={editPuppy.birthDate}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit" className="editpuppy__button">
+          Save
+        </button>
+      </form>
+    </section>
   );
 };
 

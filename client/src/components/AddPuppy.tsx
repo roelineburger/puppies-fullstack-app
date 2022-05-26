@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Puppy } from "../types";
+import logo from "../good_doggy.svg";
+import "../css/AddPuppy.css";
 interface IAddPuppyProps {
   puppies: Puppy[];
 }
@@ -46,32 +48,42 @@ const AddPuppy = ({ puppies }: IAddPuppyProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {message && <h2>{message}</h2>}
-      <header>Add a new puppy</header>
-      <input
-        type="text"
-        name="name"
-        value={newPuppy.name}
-        required
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="breed"
-        value={newPuppy.breed}
-        required
-        onChange={handleChange}
-      />
-      <input
-        type="date"
-        name="birthDate"
-        value={newPuppy.birthDate}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Add</button>
-    </form>
+    <section className="addpuppy__container">
+      <div className="addpuppy__image">
+        <img src={logo} width="400px" height="400px" alt="puppyphoto" />
+      </div>
+
+      <form onSubmit={handleSubmit} className="addpuppy__form">
+        {message && <h2>{message}</h2>}
+        <header className="addpuppy__heading">Add a new puppy</header>
+        <input
+          type="text"
+          name="name"
+          value={newPuppy.name}
+          required
+          onChange={handleChange}
+          placeholder="Enter puppy name...."
+        />
+        <input
+          type="text"
+          name="breed"
+          value={newPuppy.breed}
+          required
+          onChange={handleChange}
+          placeholder="Enter breed name...."
+        />
+        <input
+          type="date"
+          name="birthDate"
+          value={newPuppy.birthDate}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit" className="addpuppy__button">
+          Add
+        </button>
+      </form>
+    </section>
   );
 };
 
