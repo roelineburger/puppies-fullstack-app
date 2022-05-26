@@ -1,6 +1,6 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { Puppy } from "../types";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Puppy } from '../types';
 
 interface IPuppyDetails {
   puppies: Puppy[];
@@ -19,7 +19,7 @@ const PuppyDetails = ({
     deletePuppy(pid);
   };
 
-  const found = puppies.find((p) => p.id === Number(id));
+  const found = puppies.find(p => p.id === Number(id));
 
   return (
     <div>
