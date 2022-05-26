@@ -19,7 +19,7 @@ const PuppyDetails = ({
     deletePuppy(pid);
   };
 
-  const found = puppies.find((p) => p.id === Number(id));
+  const found = puppies.find(p => p.id === Number(id));
 
   return (
     <div>

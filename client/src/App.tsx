@@ -24,14 +24,12 @@ function App() {
     };
     const response = await fetch(
       `http://localhost:3010/api/puppies/${id}`,
-      options
+      options,
     );
 
     if (response.ok) {
-      setPuppies((prev) => {
-        console.log(prev);
-        const data = prev.filter((p) => p.id !== id);
-        console.log(data);
+      setPuppies(prev => {
+        const data = prev.filter(p => p.id !== id);
         return data;
       });
       navigate('/');
