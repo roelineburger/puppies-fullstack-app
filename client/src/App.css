@@ -156,8 +156,14 @@
 
 .card__btn {
   padding: 1rem;
-  color: rgb(0, 0, 103);
+  border-radius: 10px;
+  border: none;
+  background-color: whitesmoke;
   font-weight: 500;
+}
+
+.card__btn:hover {
+  background-color: #dddddd;
 }
 
 .card__btn > i {

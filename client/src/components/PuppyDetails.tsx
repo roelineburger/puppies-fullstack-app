@@ -42,12 +42,12 @@ const PuppyDetails = ({
                 className="card__btn"
                 onClick={() => handleDelete(found.id)}
               >
-                <i className="fa-solid fa-pen-to-square"></i>
+                <i className="fa-solid fa-trash-can"></i>
                 Delete
               </button>
               <Link to={`/puppy/edit/${found.id}`}>
                 <button className="card__btn">
-                  <i className="fa-solid fa-trash-can"></i>
+                  <i className="fa-solid fa-pen-to-square"></i>
                   Edit
                 </button>
               </Link>
