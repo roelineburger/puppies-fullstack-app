@@ -1,6 +1,6 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { Puppy } from "../types";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Puppy } from '../types';
 
 interface IPuppyDetails {
   puppies: Puppy[];
@@ -19,14 +19,15 @@ const PuppyDetails = ({
     deletePuppy(pid);
   };
 
-  const found = puppies.find((p) => p.id === Number(id));
+  const found = puppies.find(p => p.id === Number(id));
+
   return (
     <div>
       {found && (
-        <section>
+        <section className="details__card">
           {errorMessage && <h3>{errorMessage}</h3>}
 
-          <h3> Name : {found.name}</h3>
+          <h3>Name : {found.name}</h3>
           <h3>Breed : {found.breed}</h3>
           <h3>Birth Date: {found.birthDate}</h3>
           <button
@@ -35,7 +36,9 @@ const PuppyDetails = ({
           >
             Delete
           </button>
-          <Link to={`/puppy/edit/${found.id}`}>Edit</Link>
+          <Link to={`/puppy/edit/${found.id}`}>
+            <button>Edit</button>
+          </Link>
         </section>
       )}
     </div>

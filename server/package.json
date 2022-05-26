@@ -7,7 +7,8 @@
     "compile": "tsc -p tsconfig.json",
     "compile:watch": "npm run compile -- --watch ",
     "test": "jest --watchAll --silent",
-    "start": "nodemon ./dist/server.js"
+    "prestart": "npm run compile",
+    "start": "nodemon server.ts"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,6 @@
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "tsconfig-paths": "^3.14.1",
-    "typescript": "^4.6.3"
+    "typescript": "^4.7.2"
   }
 }

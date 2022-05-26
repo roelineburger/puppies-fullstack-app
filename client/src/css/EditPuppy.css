@@ -1,13 +1,13 @@
 .editpuppy__container {
-  width: 85vw;
+  width: 95vw;
   position: relative;
   height: 60vh;
-  background-color: #e9edc9ff;
+  background-color: var(--fawn);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  margin: 0 auto;
   border-radius: 5px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -28,7 +28,7 @@
 
 .editpuppy__heading {
   font-size: 24px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Hina Mincho", serif;
   margin-bottom: 1rem;
   color: black;
   font-weight: 600;
@@ -50,8 +50,9 @@
   border-radius: 5px;
   padding: 5px;
   color: black;
+  font-family: "Hina Mincho", serif;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 900;
   background-color: #b99436;
   border: 1px solid #d4a373ff;
 }
