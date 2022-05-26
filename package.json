@@ -2,7 +2,7 @@
   "name": "fullstack-puppies-app",
   "version": "1.0.0",
   "description": "A fullstack application with server and client displaying puppy information built with typescript",
-  "main": "index.js",
+  "main": "/server/server.ts",
   "scripts": {
     "presetup": "npm --prefix ./client i",
     "setup": "npm --prefix ./server i",
