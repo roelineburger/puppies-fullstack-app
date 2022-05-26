@@ -28,13 +28,15 @@ const PuppyDetails = ({
           <figure className="card">
             <img
               className="card__image"
-              src="/public/puppy-placeholder.jpg"
+              src="/puppy-placeholder.jpg"
               alt="puppy"
             />
-            <figcaption className="card__caption">
-              <h3>{found.name}</h3>
-              <p>{found.breed}</p>
-              <p>{found.birthDate}</p>
+            <figcaption className="caption">
+              <div className="details">
+                <h3 className="details__name">{found.name}</h3>
+                <p className="details__breed">{found.breed}</p>
+                <p className="details__bdate">{found.birthDate}</p>
+              </div>
             </figcaption>
             <div className="btns">
               <button
@@ -44,10 +46,12 @@ const PuppyDetails = ({
                 <i className="fa-solid fa-trash-can"></i>
                 Delete
               </button>
-              <button className="card__btn">
-                <i className="fa-solid fa-pen-to-square" />
-                <Link to={`/puppy/edit/${found.id}`}>Edit</Link>
-              </button>
+              <Link to={`/puppy/edit/${found.id}`}>
+                <button className="card__btn">
+                  <i className="fa-solid fa-pen-to-square" />
+                  Edit
+                </button>
+              </Link>
             </div>
           </figure>
         </article>
