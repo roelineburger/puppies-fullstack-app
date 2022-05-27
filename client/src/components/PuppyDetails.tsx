@@ -22,26 +22,40 @@ const PuppyDetails = ({
   const found = puppies.find(p => p.id === Number(id));
 
   return (
-    <div>
+    <>
       {found && (
-        <section className="details__card">
+        <article>
           {errorMessage && <h3>{errorMessage}</h3>}
-
-          <h3>Name : {found.name}</h3>
-          <h3>Breed : {found.breed}</h3>
-          <h3>Birth Date: {found.birthDate}</h3>
-          <button
-            className="btn btn-primary"
-            onClick={() => handleDelete(found.id)}
-          >
-            Delete
-          </button>
-          <Link to={`/puppy/edit/${found.id}`}>
-            <button>Edit</button>
-          </Link>
-        </section>
+          <figure className="card">
+            <img
+              className="card__image"
+              src="/puppy-placeholder.jpg"
+              alt="puppy placeholder"
+            />
+            <figcaption className="details">
+              <p className="details__name">Name: {found.name}</p>
+              <p className="details__breed">Breed: {found.breed}</p>
+              <p className="details__bdate">Birth Date: {found.birthDate}</p>
+            </figcaption>
+            <div className="btns">
+              <button
+                className="card__btn"
+                onClick={() => handleDelete(found.id)}
+              >
+                <i className="fa-solid fa-trash-can"></i>
+                Delete
+              </button>
+              <Link to={`/puppy/edit/${found.id}`}>
+                <button className="card__btn">
+                  <i className="fa-solid fa-pen-to-square"></i>
+                  Edit
+                </button>
+              </Link>
+            </div>
+          </figure>
+        </article>
       )}
-    </div>
+    </>
   );
 };
 

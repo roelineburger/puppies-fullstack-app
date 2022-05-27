@@ -1,0 +1,22 @@
+{
+  "name": "fullstack-puppies-app",
+  "version": "1.0.0",
+  "description": "A fullstack application with server and client displaying puppy information built with typescript",
+  "main": "/server/server.ts",
+  "scripts": {
+    "presetup": "npm --prefix ./client i",
+    "setup": "npm --prefix ./server i",
+    "prestart": "npm --prefix ./client run build",
+    "start": "npm --prefix ./server start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davlet61/puppies-fullstack-app.git"
+  },
+  "author": "Roeline Burger, Krishna Paruchuri, Leonardo Nunez, Dovlat Yakshibayev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davlet61/puppies-fullstack-app/issues"
+  },
+  "homepage": "https://github.com/davlet61/puppies-fullstack-app#readme"
+}
