@@ -1,0 +1,79 @@
+.addpuppy__container {
+  width: 95vw;
+  position: relative;
+  min-height: 60vh;
+  background-color: var(--fawn);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+/* .addpuppy__image {
+  display: none;
+} */
+
+.addpuppy__form {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addpuppy__heading {
+  font-size: 24px;
+  font-family: "Hina Mincho", serif;
+  margin-bottom: 1rem;
+  color: black;
+  font-weight: 600;
+}
+
+.addpuppy__form input {
+  height: 5vh;
+  width: 90%;
+  border-radius: 1rem;
+
+  margin: 5px;
+  color: rgb(38, 8, 66);
+  font-size: medium;
+  font-weight: 500;
+  border: 2px solid #d4a373ff;
+}
+
+.addpuppy__button {
+  margin-top: 1rem;
+  width: 50%;
+  border-radius: 5px;
+  font-family: "Hina Mincho", serif;
+  padding: 5px;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  background-color: #b99436;
+  border: 1px solid #d4a373ff;
+}
+
+@media screen and (min-width: 680px) {
+  .addpuppy__container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 70vh;
+  }
+  .addpuppy__image {
+    display: block;
+    width: 50%;
+    padding: 2rem;
+  }
+  .addpuppy__form {
+    width: 30%;
+  }
+}
