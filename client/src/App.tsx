@@ -59,7 +59,7 @@ function App() {
         <Route path="/" element={<Home puppies={puppies} />}></Route>
         <Route
           path="/puppy/new"
-          element={<AddPuppy puppies={puppies} />}
+          element={<AddPuppy puppies={puppies} setPuppies={setPuppies} />}
         ></Route>
 
         <Route

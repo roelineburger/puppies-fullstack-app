@@ -1,19 +1,20 @@
-import React, { useState } from "react";
-import { Puppy } from "../types";
-import logo from "../good_doggy.svg";
-import "../css/AddPuppy.css";
+import React, { useState } from 'react';
+import { Puppy } from '../types';
+import logo from '../good_doggy.svg';
+import '../css/AddPuppy.css';
 interface IAddPuppyProps {
   puppies: Puppy[];
+  setPuppies: React.Dispatch<React.SetStateAction<Puppy[]>>;
 }
 
-const AddPuppy = ({ puppies }: IAddPuppyProps) => {
+const AddPuppy = ({ puppies, setPuppies }: IAddPuppyProps) => {
   const initialState = {
     id: 0,
-    name: "",
-    breed: "",
-    birthDate: "",
+    name: '',
+    breed: '',
+    birthDate: '',
   };
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const [newPuppy, setNewPuppy] = useState(initialState);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,22 +27,22 @@ const AddPuppy = ({ puppies }: IAddPuppyProps) => {
 
     const addPuppy = async () => {
       const options = {
-        method: "POST",
+        method: 'POST',
         headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(newPuppy),
       };
-      const res = await fetch("http://localhost:3010/api/puppies/", options);
+      const res = await fetch('http://localhost:3010/api/puppies/', options);
 
       if (res.ok) {
-        puppies.push(newPuppy);
-        setMessage("New puppy has been added!");
-        setTimeout(() => setMessage(""), 4000);
+        setPuppies(puppies.concat(newPuppy));
+        setMessage('New puppy has been added!');
+        setTimeout(() => setMessage(''), 4000);
         setNewPuppy(initialState);
       } else {
-        setMessage("Failed to add a puppy");
+        setMessage('Failed to add a puppy');
       }
     };
     addPuppy();
